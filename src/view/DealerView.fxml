@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.DealerController" 
+      stylesheets="@/view/style.css">
+      <HBox alignment="CENTER" spacing="20" styleClass="padding-medium">
+            <ImageView onMouseClicked="#handleMainDeckClick" fitWidth="150" preserveRatio="true">
+                  <image>
+                        <Image url="/view/image/deck.png" />
+                  </image>
+            </ImageView>
+            <ImageView onMouseClicked="#handleSecDeckClick" fitWidth="150" preserveRatio="true">
+                  <image>
+                        <Image url="/view/image/deck.png" />
+                  </image>
+            </ImageView>
+      </HBox>
+      <HBox alignment="CENTER" maxWidth="Infinity" styleClass="padding-medium">
+            <GridPane hgap="25" vgap="10" HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                  <Label text = "Player 1:" GridPane.columnIndex="0" GridPane.rowIndex="0"/> 
+                  <Text fx:id="P1Score" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0"/> 
+                  <Label text = "Player 2:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                  <Text fx:id="P2Score" text="0" GridPane.columnIndex="3" GridPane.rowIndex="0"/> 
+
+                  <Label text = "Player 3:" GridPane.columnIndex="0" GridPane.rowIndex="1"/> 
+                  <Text fx:id="P3Score" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1"/> 
+                  <Label text = "Player 4:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                  <Text fx:id="P4Score" text="N/A" GridPane.columnIndex="3" GridPane.rowIndex="1"/> 
+            </GridPane>
+            <Button fx:id="CallBtn" text="Call" onAction="#handleCall" alignment="CENTER" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+      </HBox>
+      <HBox>
+            <Button fx:id="DealBtn" text="Deal" onAction="#handleDeal" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="PlayBtn" text="Play Round" onAction="#handlePlay" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="ExitBtn" text="Exit" onAction="#handleExit" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+      </HBox>
+</VBox>

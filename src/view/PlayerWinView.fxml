@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.PlayerWinController" 
+      stylesheets="@/view/style.css"
+      prefWidth="300.0" prefHeight="150.0"> 
+      
+      <Label text="${controller.Winner}" 
+      maxWidth="Infinity" alignment="CENTER" 
+      style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-border-color: #DDDDDD; -fx-border-width: 0 0 1 0; -fx-padding: 20px 0;" />
+      
+      <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+            <Label text="${controller.WinnerHealth}" alignment="CENTER" />
+      </VBox>
+
+      <Button text="Close" onAction="#handleClose" 
+              maxWidth="Infinity" 
+              style="-fx-background-radius: 0; -fx-padding: 12px;"/>
+
+</VBox>

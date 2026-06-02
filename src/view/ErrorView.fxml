@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ErrorController" 
+      stylesheets="@/view/style.css"
+      style="-fx-background-color: #F4F4F4;"
+      prefWidth="350.0" prefHeight="350.0">
+      <VBox alignment="CENTER" spacing="20" VBox.vgrow="ALWAYS" style="-fx-padding: 30px 0 10px 0;">
+            <ImageView fitWidth="180" preserveRatio="true">
+                  <image>
+                        <Image url="/view/image/error.png"/>
+                  </image>
+            </ImageView>
+            <Label text="${controller.ExceptionType}" 
+                   maxWidth="Infinity" alignment="CENTER" 
+                   styleClass="error" 
+                   style="-fx-border-color: #DDDDDD; -fx-border-width: 1 0 1 0; -fx-padding: 15px 0;" />
+            <Label text="${controller.Exception.Message}" 
+                   alignment="CENTER" wrapText="true" textAlignment="CENTER"
+                   style="-fx-padding: 0 20px 20px 20px;" />
+                   
+      </VBox>
+      <Button text="Close" onAction="#handleClose" 
+              maxWidth="Infinity" 
+              style="-fx-background-radius: 0; -fx-padding: 15px;"/>
+</VBox>

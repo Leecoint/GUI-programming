@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<!--Note that this window is not complete!-->
+<!-- #1 image size need to adjust -->
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.LoginController"
+      stylesheets="@/view/style.css"
+      prefWidth="600.0" alignment="CENTER">
+
+    <GridPane hgap="20" vgap="10" styleClass="padding-large">
+        <ImageView GridPane.halignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" fitWidth="100" preserveRatio="true">
+            <image>
+                <Image url="/view/image/avatar.png" />
+            </image>
+        </ImageView>
+        <ImageView GridPane.halignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0" fitWidth="100" preserveRatio="true">
+            <image>
+                <Image url="/view/image/avatar.png" />
+            </image>
+        </ImageView>
+        <ImageView GridPane.halignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0" fitWidth="100" preserveRatio="true">
+            <image>
+                <Image url="/view/image/avatar.png" />
+            </image>
+        </ImageView>
+        <ImageView GridPane.halignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="0" fitWidth="100" preserveRatio="true">
+            <image>
+                <Image url="/view/image/avatar.png" />
+            </image>
+        </ImageView>
+        <TextField GridPane.halignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1" fx:id="player1Tf" prefWidth="100"/>
+        <TextField GridPane.halignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="player2Tf" prefWidth="100"/>
+        <TextField GridPane.halignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" fx:id="player3Tf" prefWidth="100"/>
+        <TextField GridPane.halignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" fx:id="player4Tf" prefWidth="100"/>
+    </GridPane>
+
+    <Button maxWidth="Infinity" text="Start Game" onAction="#handleStart"/>
+
+</VBox>

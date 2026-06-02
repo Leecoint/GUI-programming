@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.PlayerController" 
+      stylesheets="@/view/style.css"
+      spacing="20" 
+      alignment="CENTER_LEFT"
+      style="-fx-background-color: #EEEEEE; -fx-padding: 20px;"
+      prefWidth="850.0" prefHeight="350.0">
+
+      <VBox spacing="0" prefWidth="320" minWidth="320" maxWidth="320">
+            <TableView fx:id="playersTv" prefHeight="270" minHeight="270" maxHeight="270">
+                  <placeholder><Label text="Empty"/></placeholder>
+                  <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                  </columnResizePolicy>
+                  <columns>
+                        <TableColumn text="Name" fx:id="NameClm"/>
+                        <TableColumn text="Attack" fx:id="AttackClm"/>
+                        <TableColumn text="Style" fx:id="StyleClm"/>
+                        <TableColumn text="Health" fx:id="HealthClm"/>
+                  </columns>
+            </TableView>
+            <Button fx:id="SelectBtn" text="Select" disable="true" maxWidth="Infinity" onAction="#handleSelect" 
+                    style="-fx-padding: 10px;" />
+      </VBox>
+      
+      <VBox spacing="0" prefWidth="280" minWidth="280" maxWidth="280">
+            <ListView fx:id="dealLv" prefHeight="270" minHeight="270" maxHeight="270">
+                  <placeholder><Label text="Empty"/></placeholder>
+            </ListView>
+            <Button fx:id="PlaceBtn" text="Place" disable="true" maxWidth="Infinity" onAction="#handlePlace" 
+                    style="-fx-padding: 10px;" />
+      </VBox>
+
+      <VBox alignment="CENTER">
+          <ImageView fx:id="CardIv" fitWidth="180" preserveRatio="true">
+                <image>
+                      <Image url="/view/image/cards/empty.png"/>
+                </image>
+          </ImageView>
+      </VBox>
+
+</HBox>

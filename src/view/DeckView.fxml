@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.DeckController" 
+      stylesheets="@/view/style.css">
+
+      <ListView fx:id="cardLv">
+
+      </ListView>
+      <HBox alignment="CENTER">
+            <Button text="Show Card" fx:id="showBtn" onAction="#handleShow" disable="true" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <Button text="Close" onAction="#handleClose" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+      </HBox>
+</VBox>
